@@ -1,10 +1,14 @@
 .form-wrap{
+	
  	&__input-wrap{
 			@extend .form-group;
 			
 		}
 		&__input{
 			@extend .form-control;
+			@extend .form-control-lg;
+			text-align: center;
+			font-size: 1rem;
 		//  outline: 0 !important;
 		 resize: none;
  	}
@@ -14,24 +18,24 @@
  	label{
  		width: 100%;
  		display: block;
- 	}
-}
+	 }
+	 &__title{
+		color: #000000;
+		font-family: Ubuntu;
+		@include rfs(rem(32));
+		padding-bottom: rem(20);
+		// font-size: 32px;
+		font-weight: 700;
+	 }
 
-
-.parsley-error{
-	border-image: none;
-	border: 2px solid  red !important;
-	color: red;
-	outline: 0 !important;
-	 
+	 &__btn{
+		 @extend .btn;
+		 @extend .btn-lg;
+		 @extend .btn-success;
+		 margin-top: 2rem;
+	 }
 }
-.parsley-success{
-	border: 2px solid  #00d600 !important;
-
-}
-.parsley-errors-list{
-	color: red;
-}
+ 
 
 // 
 @include media-breakpoint-up(xl) {}
@@ -75,12 +79,20 @@
 .custom-input{
 	display: block;
 	margin: auto;
-	 
+	 text-align: left;
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
-	padding-left: rem(35px);
+	padding-left: rem(40);
 	display: inline-block;
+	font-size: rem(12);
+	a{
+		color: #000000 !important;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
 	&__input{
 		position: absolute;
 		// opacity: 0;
@@ -96,9 +108,10 @@
 		left: 0;
 		display: block;
 		top: rem(3); 
-		width: rem(20px);
-		height: rem(20px);
-		background-color: $primary;
+		width: rem(30px);
+		height: rem(30px);
+		border-radius: 5px;
+		border: 1px solid #e8e8e8; 
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
@@ -113,9 +126,14 @@
  
 	&__input[type="checkbox"] + &__lab{
 		&::after{ 
-			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
-			position: absolute;
+			content: '';
 			@include a-cent; 
+			background-image:   url("../img/svg/check.svg");
+			position: absolute;
+			width: rem(17px);
+			height: rem(11px);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
 			opacity: 0;
 		}
 	}
@@ -127,9 +145,7 @@
 		}
 	}
 
-	&__input:checked + &__lab{
-		background-color: $success;
-		 
+	&__input:checked + &__lab{ 
 		&::after{
 	
 			opacity: 1;

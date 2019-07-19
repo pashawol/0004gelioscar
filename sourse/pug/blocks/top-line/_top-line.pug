@@ -11,12 +11,14 @@ mixin top-line()
 				+e.col.col
 					+e.text Контроль личного транспорта
 				+e.col.col-auto
-					+e.link(href="#")
+					+e.link.popup-with-move-anim(href="#modal-balance")
 						+e.icon-wrap
 							+icon('money')
 						.d-none.d-lg-block Проверить свой счёт или пополнить баланс
 				+e.col.col-auto.order-xl-last.d-none.d-md-block
-					+e.btn(href="#") Протестировать бесплатно
+					+e.btn.popup-with-move-anim(href="#modal-form") Протестировать бесплатно
+					//- +e.btn.popup-with-move-anim(href="#modal-thanks") Протестировать бесплатно
+					//- +e.btn.popup-with-move-anim(href="#modal-balance") Протестировать бесплатно
 				+e.col.col-xl-auto
 					+e.tel-wrap
 						+e.tel(href="tel:+74951202545") 

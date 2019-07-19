@@ -29,7 +29,7 @@ mixin form-wrap()
 
 mixin in-c(typ="checkbox", text, name= typ )
 	+b.LABEL.custom-input
-		+e.INPUT.input(type= type , name= name) 
+		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
 		+e.SPAN.lab
 		if block
 			block 
@@ -47,5 +47,7 @@ mixin add-file(n)
 
 mixin polite()
 	+e.polite
-		+in-c('','','checked')(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+		+in-c()(checked)
+			+e.SPAN.text Согласен на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;
+				|
+				a(href="#") Условиями.
