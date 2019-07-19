@@ -1,0 +1,42 @@
+mixin s-price()
+	// start s-price
+	+b.SECTION.s-price.section.block-with-lazy#s-price&attributes(attributes)
+		.container
+			
+			h2.text-center Сколько стоит такая система?
+			table
+				thead
+					tr
+						th Количество
+						th Оборудование
+							br
+							| + международ. SIM
+							br
+							| + установка в&nbsp;авто
+						th(colspan="2") Абонентская плата
+					tr
+				tbody
+					mixin tr(count , pr, ob)
+						tr
+							td 
+								strong=count 
+								| авто
+							td(data-title="Оборудование, установка, SIM:") 
+								strong=pr 
+								|   / 1 авто
+							
+							td(data-title="Абонентская плата:") 
+								strong= ob 
+								|   / 1 авто
+							
+							td
+								+e.btn--table(href="#") записаться на установку
+					+tr("1 - 4 ","8 200 руб. ","900 руб. мес ")
+					+tr("5 - 9 ","7 200 руб. ","800 руб. мес ")
+					+tr("10 - 49 ","6 200 руб. ","700 руб. мес ")
+					+tr("50 - 99 ","5 200 руб. ","600 руб. мес ")
+					+tr("от 100 ","4 200 руб. ","500 руб. мес ")
+			
+	// end s-price
+	.btn-wrap
+		a(href="#").btn-white Протестировать бесплатно

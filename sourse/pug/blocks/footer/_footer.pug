@@ -1,0 +1,22 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			+e.body.row
+				+e.col.col-lg.text-lg-left.text-center
+					+e.logo(href="/") 
+						+piclazy('logo-light',"png")
+						//- img(src="img/@2x/logo.png", alt="")
+				+e.col.col-md-auto 
+					+e.link(href="tel:+74951202545")  +7 495 120 25 45
+				
+				+e.col.col-md-auto 
+					+e.link(href="mailto:support@gelioscar.ru") support@gelioscar.ru
+			 
+				+e.col.col-md-auto
+					+e.btn(href="#") Протестировать бесплатно
+		+e.foot.small
+			.container
+				.row
+					+e.col-foot.col &copy;&nbsp;2019 Gelioscar&nbsp;&mdash; контроль личного транспорта.
+					+e.col-foot.col-md-auto
+						a(href="#") Политика конфиденциальности

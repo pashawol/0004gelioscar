@@ -1,0 +1,25 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row
+				+e.col.col-auto
+					+e.logo(href="/")
+						
+						+pic('logo',"png")
+						//- img(src="img/@2x/logo.png", alt="")
+				+e.col.col
+					+e.text Контроль личного транспорта
+				+e.col.col-auto
+					+e.link(href="#")
+						+e.icon-wrap
+							+icon('money')
+						.d-none.d-lg-block Проверить свой счёт или пополнить баланс
+				+e.col.col-auto.order-xl-last.d-none.d-md-block
+					+e.btn(href="#") Протестировать бесплатно
+				+e.col.col-xl-auto
+					+e.tel-wrap
+						+e.tel(href="tel:+74951202545") 
+							+icon("phone-receiver")
+							| +7 495 120 25 45
+	// end .top-line

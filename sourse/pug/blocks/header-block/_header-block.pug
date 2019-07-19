@@ -1,0 +1,21 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			
+			.row.justify-content-center
+				.col-auto
+					+pic('head-img','png')
+				.col-lg.col-sm-auto.col
+					.row
+						.col-auto.d-none.d-lg-block
+							+pic('head-phone','png','0')
+						.col
+							+e.text-block
+								+e.title ваш автомобиль под&nbsp;контролем в&nbsp;любой точке мира*
+								+e.text Кроме США и&nbsp;Республики Крым
+				.col-lg.order-lg-first
+					+e.btn-wrap
+						+btn()(class="header-block__btn")
+						+e.btn.btn-outline-success(href="#") записаться на установку
+	// end header-block

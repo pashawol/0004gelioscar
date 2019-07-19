@@ -1,0 +1,352 @@
+extends layout/main.pug
+
+
+include ../blocks/s-price/_s-price.pug
+
+block title
+	title title
+
+block pagecontent
+	//- .container
+	//- 	+in-c("","adasd")
+	//- 	+form-wrap
+	//- 		+input("placeholder","email","", '') 
+	//- 		+input("placeholder","tel","") 
+	//- 		+input("placeholder","text","") 
+	//- 		+input("placeholder","text","label") 
+	//- 		+input("placeholder","textarea","") 
+	//- 		+input("placeholder","textarea","label") 
+	//- 		+input("","textarea","") 
+	//- +pugin()
+	//- +mob-mnu()
+
+	+header()
+		+top-line()
+		//- +top-nav()
+	+header-block()
+	 
+	+section()(class="section--1")
+		.row--sec.align-items-center
+			.col
+				
+				h2.h1 Вы&nbsp;всегда точно знаете 
+					| 
+					span.text-primary где сейчас ваше авто
+				p Присмотрите за мужем, женой, водителем с детьми или сотрудниками.
+				.d-md-none
+					+iphone(1)
+				ul
+					li 
+						strong Машина исчезла? 
+						| 
+						|  Без паники. Открывайте программу &mdash; вероятно её&nbsp;эвакуировали.
+					li 
+						strong Вышли из&nbsp;магазина на&nbsp;стоянку и&nbsp;среди тысячи машин не&nbsp;можете вспомнить где ваша? 
+						| 
+						| Откройте программу и&nbsp;идите к&nbsp;ней по&nbsp;карте.
+				p.smaller Только наше оборудование работает в&nbsp;роуминге по&nbsp;всему миру (без доплат). Другие сигнализации и&nbsp;системы контроля не&nbsp;передают интернет трафик при выезде из&nbsp;РФ.
+			.col-xl-4.col-md-auto.text-center.d-none.d-md-block
+				+iphone(1)
+	+section()(class="section--2    ")
+		h2.d-lg-none.text-center  А&nbsp;если автомобиль
+				| 
+				span.text-primary не&nbsp;один?
+		.row--sec.align-items-center
+			.col-lg-auto
+				.row--sm.justify-content-center
+					.col-lg-6.col-auto
+						+iphone(2) 
+					.col-lg-6.col-auto
+						+iphone(3) 
+				
+			.col
+
+				h2.d-none.d-lg-block  А&nbsp;если автомобиль
+					| 
+					span.text-primary не&nbsp;один?
+				p 2, 5, 10, 100, 1000&nbsp;&mdash; любое количество автомобилей &laquo;влезет&raquo; в&nbsp;нашу программу.
+
+				p Объедените в&nbsp;один аккаунт автомобили всей семьи или компании и&nbsp;контролируйте все с&nbsp;телефона.
+				+btn()
+
+	+section()(class="  ")
+		.row.row--card
+			.col-lg.col-sm-6
+				+card('1')
+					p Оставили автомобиль на неохраняемой парковке? У&nbsp;вас подозрение на&nbsp;угон?
+			
+			.col-lg.col-sm-6
+				+card('2')
+					p Вы не помните где ключи?
+			
+			.col-lg.col-sm-6
+				+card('3')
+					p Вы&nbsp;дали кому-то автомобиль и&nbsp;не&nbsp;можете дозвониться?
+			
+			.col-lg.col-sm-6
+				+card('4')
+					p Вы&nbsp;хотите немедленно остановить свой автомобиль?
+		.row--sec.align-items-center
+			.col
+
+				h2  Заблокируйте двигатель
+					| 
+					span.text-primary в&nbsp;один клик!
+				.d-md-none
+					+iphone(4) 
+				p Функция &laquo;безопасной блокировки&raquo; отключит подачу питания на&nbsp;бензонасос при снижении скорости до&nbsp;5&nbsp;км/час. Это значит, что ваше авто будет продолжать его до&nbsp;первой остановки &mdash; двигатель будет заглушен.
+
+				p С&nbsp;авто все впорядке? Разблокируйте двигатель и&nbsp;заводите через 10&nbsp;секунд.
+				+btn()
+	
+			.col-lg-5.col-md-auto.text-center
+				.d-none.d-md-block
+					+iphone(4) 
+	+section()(class="     ")
+		h2.d-lg-none.text-center Функция 
+			| 
+			span.text-primary «Трекинг»
+		.row--sec.align-items-center
+			.col-lg-6.col-md-auto
+				.row
+					.col-xl-7.col-lg-auto
+						+iphone(5)  
+			.col
+
+				h2.d-none.d-lg-block  Функция 
+					| 
+					span.text-primary «Трекинг»
+				p Ровно в&nbsp;3&nbsp;клика вы&nbsp;увидите маршрут вашего авто, узнаете общее время в&nbsp;пути, а&nbsp;также общий километраж поездки за&nbsp;любой прошедший отрезок времени.
+
+				p: small Где ехала, где останавливалась и&nbsp;на&nbsp;сколько, где стояла и&nbsp;сколько.
+
+				p: small Наконец, вы&nbsp;сможете узнать сколько киллометров вы&nbsp;проезжаете за&nbsp;неделю или месяц и&nbsp;сколько находитесь за&nbsp;рулем.
+				+btn()
+
+	+section()(class=" text-md-left text-center   ")
+		.row--card.justify-content-center
+			.col-lg.col-sm-4
+				+card('2-1')
+					p Во&nbsp;сколько выехала машина?
+			
+			.col-lg.col-sm-4
+				+card('2-2')
+					p Превышал&nbsp;ли водитель скорость
+			
+			.col-lg.col-sm-4
+				+card('1')
+					p Сколько стоял?
+			
+			.col-lg.col-sm-4
+				+card('2-4')
+					p Сколько  потратил топлива?
+			
+			.col-lg.col-sm-4
+				+card('2-5')
+					p Каким маршрутом ехал?
+		.row--sec.align-items-center
+			.col-md
+
+				h2  Сводный отчёт 
+ 
+					| 
+					span.text-primary «Статистика» 
+				.d-md-none.text-center
+					+iphone(6) 
+				p: strong Покажет за&nbsp;выбранный период:
+
+				ul
+					li Время начала и&nbsp;окончание поездок
+					li Общий пробег
+					li Длительность остановок (двигатель вкл)
+					li Длительность стоянок (двигатель выкл)
+					li Максимальную скорость
+					li Среднюю скорость
+					li График скорости
+					li Карту маршрута
+				h6 Один отчёт&nbsp;&mdash; 
+					|
+					span.text-primary ответ на&nbsp;все вопросы.
+	
+			.col-lg-5.col-md-auto.text-center
+				.d-none.d-md-block
+					+iphone(6) 
+		.text-center
+			a.btn-success.mt-3(href="#") Протестировать бесплатно
+	+section()(class="section--5     ")
+		h2.d-lg-none.text-center Отчёт 
+			| 
+			span.text-primary «Поездки»
+		.row--sec.align-items-center
+			.col-lg-6.col-md-auto
+				.row
+					.col-xl-7.col-lg-auto
+						+iphone(6)  
+			.col
+
+				h2.d-none.d-lg-block  Отчёт 
+					| 
+					span.text-primary «Поездки»
+				p Разделяет на&nbsp;отдельные сегменты общий путь прошедшего отрезка времени через контроль работы двигателя.
+
+				p Запуск двигателя начинает поездку.
+					br
+					| Остановка двигателя завершает поездку.
+				p: strong Каждый отчёт содержит:
+				ul
+					li Адрес начала и&nbsp;завершения поездки
+					li Километраж
+					li Время в&nbsp;пути
+		.row--foot
+			.col-sm
+				+card-lg('2-1')
+					| Вы&nbsp;точно сможете проверить во&nbsp;сколько ваше авто выехало из&nbsp;дома и&nbsp;приехало в&nbsp;школу, сколько километров от&nbsp;школы до&nbsp;дачи, какие остановки делались по&nbsp;пути, сколько времени ехать от&nbsp;дачи до&nbsp;гаража, а&nbsp;также как соблюдался скоростной режим.
+			
+			.col-sm
+				+card-lg('2-5')
+					| А&nbsp;если за&nbsp;рулем был ваш сотрудник&nbsp;&mdash; вы&nbsp;точно сможете узнать сколько поездок он&nbsp;совершил, адреса которые он&nbsp;посетил, а&nbsp;по&nbsp;времени между поездками высчитать сколько он&nbsp;потратил на&nbsp;переговоры.
+			
+		.text-center
+			+btn()
+	
+	+section()(class="section--5    ")
+		h2.d-lg-none.text-center Отчёт 
+			| 
+			span.text-primary «Стоянки»
+		.row--sec.align-items-center
+			.col-lg-6.col-md-auto.order-md-last
+				+iphone(7)  
+			.col
+
+				h2.d-none.d-lg-block  Отчёт 
+					| 
+					span.text-primary «Стоянки»
+				p: strong Показывает адреса и&nbsp;продолжительность стоянок вашего авто в&nbsp;заданном отрезке времени.
+				p В&nbsp;приложении Gelios поставьте дату и&nbsp;время нарушения и&nbsp;посмотрите&nbsp;&mdash; стояла&nbsp;ли ваша машина по&nbsp;адресу нарушения.
+				p А&nbsp;может вас там не&nbsp;было и&nbsp;это был &laquo;двойник&raquo;?
+					br
+					| Тогда надо обратиться в&nbsp;полицию.
+
+		.row--foot
+			.col-sm
+				+card-lg('3-1')
+					| Не&nbsp;запомнили адрес хорошего ресторанчика где остановились примерно в&nbsp;16:00? 
+					br
+					strong Проверьте в&nbsp;отчёте.
+			
+			.col-sm
+				+card-lg('3-2')
+					| Ваш сотрудник говорит, что в&nbsp;15:00 провел переговоры на&nbsp;ул. Ленина, 10? 
+					br
+					strong Проверьте в&nbsp;отчёте.
+			
+		.text-center
+			+btn()
+
+	+section()(class="    ")
+		h2.d-lg-none.text-center Отчёт 
+			| 
+			span.text-primary «Поездки»
+		.row--sec.align-items-center
+			.col-lg-6.col-md-auto
+				.row
+					.col-xl-7.col-lg-auto
+						+iphone(6)  
+			.col
+
+				h2.d-none.d-lg-block  Отчёт 
+					| 
+					span.text-primary «Поездки»
+				p Разделяет на&nbsp;отдельные сегменты общий путь прошедшего отрезка времени через контроль работы двигателя.
+
+				p Запуск двигателя начинает поездку.
+					br
+					| Остановка двигателя завершает поездку.
+				p: strong Каждый отчёт содержит:
+				ul
+					li Адрес начала и&nbsp;завершения поездки
+					li Километраж
+					li Время в&nbsp;пути
+		.row--foot
+			.col-sm
+				+card-lg('2-1')
+					| Вы&nbsp;точно сможете проверить во&nbsp;сколько ваше авто выехало из&nbsp;дома и&nbsp;приехало в&nbsp;школу, сколько километров от&nbsp;школы до&nbsp;дачи, какие остановки делались по&nbsp;пути, сколько времени ехать от&nbsp;дачи до&nbsp;гаража, а&nbsp;также как соблюдался скоростной режим.
+			
+			.col-sm
+				+card-lg('2-5')
+					| А&nbsp;если за&nbsp;рулем был ваш сотрудник&nbsp;&mdash; вы&nbsp;точно сможете узнать сколько поездок он&nbsp;совершил, адреса которые он&nbsp;посетил, а&nbsp;по&nbsp;времени между поездками высчитать сколько он&nbsp;потратил на&nbsp;переговоры.
+			
+		.text-center
+			+btn()
+	+section()(class="section--5    ")
+		h2.d-lg-none.text-center Отчёт 
+			| 
+			span.text-primary «Стоянки»
+		.row--sec.align-items-center
+			.col-lg-6.col-md-auto.order-md-last
+				+iphone(7)  
+			.col
+
+				h2.d-none.d-lg-block  Отчёт 
+					| 
+					span.text-primary «Стоянки»
+				p: strong Показывает адреса и&nbsp;продолжительность стоянок вашего авто в&nbsp;заданном отрезке времени.
+				p В&nbsp;приложении Gelios поставьте дату и&nbsp;время нарушения и&nbsp;посмотрите&nbsp;&mdash; стояла&nbsp;ли ваша машина по&nbsp;адресу нарушения.
+				p А&nbsp;может вас там не&nbsp;было и&nbsp;это был &laquo;двойник&raquo;?
+					br
+					| Тогда надо обратиться в&nbsp;полицию.
+
+		.row--foot
+			.col-sm
+				+card-lg('3-1')
+					| Не&nbsp;запомнили адрес хорошего ресторанчика где остановились примерно в&nbsp;16:00? 
+					br
+					strong Проверьте в&nbsp;отчёте.
+			
+			.col-sm
+				+card-lg('3-2')
+					| Ваш сотрудник говорит, что в&nbsp;15:00 провел переговоры на&nbsp;ул. Ленина, 10? 
+					br
+					strong Проверьте в&nbsp;отчёте.
+			
+		.text-center
+			+btn()
+	+section()(class="section--5     ")
+		h2.d-lg-none.text-center Аналитика 
+			| 
+			span.text-primary качества вождения
+		.row--sec.align-items-center
+			.col-lg-6.col-md-auto
+				+iphone(8)  
+			.col
+
+				h2.d-none.d-lg-block  Аналитика 
+					| 
+					span.text-primary качества вождения
+				p: strong За выбранный период выявит нарушения: 
+				ul
+					li Превышение скорости
+					li Опасные манёвры
+					li Резкое торможение
+				p: strong Процентовка: 
+				ul
+					li Езда в ночное время
+					li Езда в городе
+
+				p Не&nbsp;нужно ездить с&nbsp;водителем целый день&nbsp;&mdash; всё скажут цифры. 
+					|
+					strong Их&nbsp;не&nbsp;обмануть и&nbsp;не&nbsp;подстроить.
+
+		.row--foot
+		 
+		.text-center
+			+btn()
+	+section()(class="section--5 text-center     ")
+		h2.text-center Полноценный профессиональный функционал
+			| 
+			span.text-primary для Вашего компьютера
+		h6.pb-3 Сотни возможностей для контроля
+		+piclazy('computer', '','992px')
+	+s-price
+	+footer()
+
