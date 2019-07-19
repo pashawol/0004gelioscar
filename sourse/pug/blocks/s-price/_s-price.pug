@@ -30,7 +30,7 @@ mixin s-price()
 								|   / 1 авто
 							
 							td
-								+e.btn--table(href="#") записаться на установку
+								+e.btn--table.popup-with-move-anim(href="#modal-form" data-title="Записаться на установку" data-btn="записаться") записаться на установку
 					+tr("1 - 4 ","8 200 руб. ","900 руб. мес ")
 					+tr("5 - 9 ","7 200 руб. ","800 руб. мес ")
 					+tr("10 - 49 ","6 200 руб. ","700 руб. мес ")
@@ -39,4 +39,4 @@ mixin s-price()
 			
 	// end s-price
 	.btn-wrap
-		a(href="#").btn-white Протестировать бесплатно
+		a.popup-with-move-anim(href="#modal-form" data-title="Протестировать бесплатно" data-btn="Протестировать").btn-white Протестировать бесплатно

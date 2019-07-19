@@ -13,7 +13,16 @@ jQuery(document).ready(function ($) {
 	
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Home_Desktop.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
+	$('.popup-with-move-anim').click(function () {
+		var th = $(this);
+		$(th.attr('href')).find(".order").val(th.data('order'));
  
+		
+		$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title')); 
+		 
+		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
+	 
+	})
 });
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
